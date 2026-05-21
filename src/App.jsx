@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-  const whatsappNumber = "2677491467";
+  const whatsappNumber = "26774891467";
 
   const portfolio = [
     "/portfolio1.png",
@@ -13,87 +13,77 @@ function App() {
     "/portfolio7.png",
   ];
 
-  const services = [
-    "Flyer Design",
-    "Poster Design",
-    "Business Branding",
-    "Logo Design",
-    "Social Media Ads",
-    "Event Promotions",
-  ];
-
   const sendToWhatsApp = () => {
     const message = encodeURIComponent(
-      "Hello Kreative KayGee Designs, I would like to place an order."
+      "Hello Kreative KayGee Designs, I would like to place an order. I need a design for:"
     );
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
   };
 
   return (
-    <div className="website">
-      <a
-        className="floating-whatsapp"
-        href={`https://wa.me/${whatsappNumber}`}
-        target="_blank"
-      >
+    <div className="site">
+      <a className="floating-whatsapp" href={`https://wa.me/${whatsappNumber}`} target="_blank">
         WhatsApp
       </a>
 
       <section className="hero">
-        <nav className="navbar">
-          <h1>Kreative KayGee</h1>
+        <nav>
+          <h1>Kreative KayGee Designs</h1>
           <button onClick={sendToWhatsApp}>Order Now</button>
         </nav>
 
         <div className="hero-content">
-          <p className="tag">Kreative KayGee Designs™</p>
-          <h2>
-            Bright designs that make your brand <span>stand out.</span>
-          </h2>
-          <p className="hero-text">
-            Flyers, posters, branding and social media graphics made with clean,
-            bold and modern visual style.
+          <p className="badge">Kreative KayGee Designs</p>
+          <h2>Your brand deserves visuals that stand out.</h2>
+          <p>
+            Bold flyers, posters, branding, social media graphics and promotional designs made to attract attention.
           </p>
 
-          <div className="hero-buttons">
+          <div className="buttons">
             <button onClick={sendToWhatsApp}>Place WhatsApp Order</button>
-            <a href="#portfolio">View Recent Work</a>
+            <a href="#portfolio">View Portfolio</a>
           </div>
         </div>
       </section>
 
+      <section className="stats">
+        <div><h3>150+</h3><p>Creative Designs Delivered</p></div>
+        <div><h3>15+</h3><p>Returning Clients</p></div>
+        <div><h3>100%</h3><p>Passion & Creativity</p></div>
+      </section>
+
       <section className="portfolio" id="portfolio">
-        <p className="section-tag">Recent Work</p>
+        <p className="section-badge">Recent Work</p>
         <h2>Portfolio Showcase</h2>
 
+        <div className="featured-work">
+          <img src={portfolio[0]} alt="Kreative KayGee portfolio 1" />
+          <img src={portfolio[1]} alt="Kreative KayGee portfolio 2" />
+        </div>
+
         <div className="portfolio-grid">
-          {portfolio.map((image, index) => (
-            <div className="work-card" key={index}>
-              <img src={image} alt={`Kreative KayGee work ${index + 1}`} />
-            </div>
+          {portfolio.slice(2).map((image, index) => (
+            <img key={index} src={image} alt={`Kreative KayGee portfolio ${index + 3}`} />
           ))}
         </div>
       </section>
 
       <section className="services">
-        <p className="section-tag">What We Do</p>
-        <h2>Design Services</h2>
+        <p className="section-badge light">Our Services</p>
+        <h2>Clean, modern and impactful designs.</h2>
 
-        <div className="services-grid">
-          {services.map((service, index) => (
-            <div className="service-card" key={index}>
-              <span>0{index + 1}</span>
-              <h3>{service}</h3>
-              <p>Professional, clean and eye-catching designs ready for digital or print use.</p>
-            </div>
-          ))}
+        <div className="service-grid">
+          <div><h3>Flyer Design</h3><p>Events, parties, promotions and business flyers.</p></div>
+          <div><h3>Poster Design</h3><p>Eye-catching posters for digital and print use.</p></div>
+          <div><h3>Brand Identity</h3><p>Logos, business visuals and complete brand direction.</p></div>
+          <div><h3>Social Media Graphics</h3><p>Instagram, Facebook, TikTok and WhatsApp status designs.</p></div>
         </div>
       </section>
 
-      <section className="order-section">
-        <h2>Ready to order your design?</h2>
-        <p>Click below and send your request straight to WhatsApp.</p>
-        <button onClick={sendToWhatsApp}>Start Order on WhatsApp</button>
+      <section className="order">
+        <h2>Ready to create something powerful?</h2>
+        <p>Send your design request straight to WhatsApp.</p>
+        <button onClick={sendToWhatsApp}>Start Order</button>
       </section>
     </div>
   );
