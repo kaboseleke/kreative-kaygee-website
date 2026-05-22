@@ -53,8 +53,10 @@ body {
 }
 
 .navbar-logo{
-  height:18px;
+  height:70px;
   width:auto;
+  object-fit:contain;
+  display:block;
 }
 
 .nav-links {
@@ -368,7 +370,8 @@ button:hover,
   }
 
  .navbar-logo{
-  height:24px;
+  height:26px;
+  width:auto;
 }
 
   .nav-links {
