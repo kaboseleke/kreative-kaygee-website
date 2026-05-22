@@ -90,9 +90,9 @@ function App() {
             </div>
           </div>
 
-          <div className="hero-card">
-            <img src="/portfolio8.png" alt="Kreative KayGee introduction design" />
-          </div>
+          <div className="hero-card logo-card">
+  <img src="/logo.png" alt="Kreative KayGee Logo" />
+</div>
         </div>
       </header>
 
