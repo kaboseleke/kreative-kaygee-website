@@ -94,9 +94,7 @@ function App() {
             </div>
           </div>
 
-          <div className="hero-card logo-card">
-  <img src="/logo.png" alt="Kreative KayGee Logo" />
-</div>
+
         </div>
       </header>
 
