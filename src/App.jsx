@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const whatsappNumber = "26778491467";
+  const whatsappNumber = "26774891467";
 
   const instagramLink = "https://instagram.com/kreative_kaygee_designs";
   const facebookLink = "https://facebook.com//KAYGEE.267/";
