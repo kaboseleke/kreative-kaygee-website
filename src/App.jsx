@@ -56,7 +56,11 @@ function App() {
 
       <header className="hero">
         <nav className="navbar">
-          <h1>Kreative KayGee Designs</h1>
+          <img
+  src="/logo.png"
+  alt="Kreative KayGee Designs Logo"
+  className="navbar-logo"
+/>
 
           <div className="nav-links">
             <a href="#portfolio">Work</a>
