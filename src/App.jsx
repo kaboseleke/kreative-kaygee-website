@@ -4,9 +4,9 @@ import "./App.css";
 function App() {
   const whatsappNumber = "26778491467";
 
-  const instagramLink = "https://instagram.com/YOUR_INSTAGRAM";
-  const facebookLink = "https://facebook.com/YOUR_FACEBOOK";
-  const tiktokLink = "https://tiktok.com/@YOUR_TIKTOK";
+  const instagramLink = "https://instagram.com/kreative_kaygee_designs";
+  const facebookLink = "https://facebook.com//KAYGEE.267/";
+  const tiktokLink = "https://tiktok.com/@kaygee_267";
 
   const portfolio = [
     "/portfolio1.png",
