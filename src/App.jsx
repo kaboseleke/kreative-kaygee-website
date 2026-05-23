@@ -32,6 +32,7 @@ function App() {
   ];
 
   const [showAll, setShowAll] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const visiblePortfolio = showAll ? portfolio : portfolio.slice(0, 5);
 
@@ -57,10 +58,10 @@ function App() {
       <header className="hero">
         <nav className="navbar">
           <img
-  src="/logo.png"
-  alt="Kreative KayGee Designs Logo"
-  className="navbar-logo"
-/>
+            src="/logo.png"
+            alt="Kreative KayGee Designs Logo"
+            className="navbar-logo"
+          />
 
           <div className="nav-links">
             <a href="#portfolio">Work</a>
@@ -93,8 +94,6 @@ function App() {
               <a href={tiktokLink} target="_blank" rel="noreferrer">TikTok</a>
             </div>
           </div>
-
-
         </div>
       </header>
 
@@ -121,12 +120,16 @@ function App() {
 
         <div className="portfolio-grid">
           {visiblePortfolio.map((image, index) => (
-            <div className="work-card" key={index}>
-            <img
-  src={image}
-  alt={`Kreative KayGee design ${index + 1}`}
-  loading="lazy"
-/>
+            <div
+              className="work-card"
+              key={index}
+              onClick={() => setSelectedImage(image)}
+            >
+              <img
+                src={image}
+                alt={`Kreative KayGee design ${index + 1}`}
+                loading="lazy"
+              />
             </div>
           ))}
         </div>
@@ -170,6 +173,13 @@ function App() {
         <p>Send your request straight to WhatsApp and let’s build your next design.</p>
         <button onClick={sendToWhatsApp}>Start Order</button>
       </section>
+
+      {selectedImage && (
+        <div className="lightbox" onClick={() => setSelectedImage(null)}>
+          <button className="close-lightbox">×</button>
+          <img src={selectedImage} alt="Full design preview" />
+        </div>
+      )}
     </div>
   );
 }
