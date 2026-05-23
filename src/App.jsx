@@ -9,26 +9,26 @@ function App() {
   const tiktokLink = "https://tiktok.com/@kaygee_267";
 
   const portfolio = [
-    "/portfolio1.png",
-    "/portfolio2.png",
-    "/portfolio3.png",
-    "/portfolio4.png",
-    "/portfolio5.png",
-    "/portfolio6.png",
-    "/portfolio7.png",
-    "/portfolio8.png",
-    "/portfolio9.png",
-    "/portfolio10.png",
-    "/portfolio11.png",
-    "/portfolio12.png",
-    "/portfolio13.png",
-    "/portfolio14.png",
-    "/portfolio15.png",
-    "/portfolio16.png",
-    "/portfolio17.png",
-    "/portfolio18.png",
-    "/portfolio19.png",
-    "/portfolio20.png",
+    "/portfolio1.webp",
+    "/portfolio2.webp",
+    "/portfolio3.webp",
+    "/portfolio4.webp",
+    "/portfolio5.webp",
+    "/portfolio6.webp",
+    "/portfolio7.webp",
+    "/portfolio8.webp",
+    "/portfolio9.webp",
+    "/portfolio10.webp",
+    "/portfolio11.webp",
+    "/portfolio12.webp",
+    "/portfolio13.webp",
+    "/portfolio14.webp",
+    "/portfolio15.webp",
+    "/portfolio16.webp",
+    "/portfolio17.webp",
+    "/portfolio18.webp",
+    "/portfolio19.webp",
+    "/portfolio20.webp",
   ];
 
   const [showAll, setShowAll] = useState(false);
@@ -122,7 +122,11 @@ function App() {
         <div className="portfolio-grid">
           {visiblePortfolio.map((image, index) => (
             <div className="work-card" key={index}>
-              <img src={image} alt={`Kreative KayGee design ${index + 1}`} />
+            <img
+  src={image}
+  alt={`Kreative KayGee design ${index + 1}`}
+  loading="lazy"
+/>
             </div>
           ))}
         </div>
